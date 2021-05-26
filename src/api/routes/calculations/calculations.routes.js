@@ -19,10 +19,10 @@ router.get('/:number', async (req, res) => {
     const { number } = req.params;
     const { error, data } = await getDecimalNumbers({
       number: parseInt(number, 10),
-      Logger,
     });
-    Logger.response({ code: StatusCodes.OK });
-    return res.status(StatusCodes.OK).send({ error, data });
+    const code = error ? StatusCodes.BAD_REQUEST : StatusCodes.OK;
+    Logger.response({ code, data });
+    return res.status(code).send({ error, data });
   } catch (err) {
     Logger.error({ err });
     return res

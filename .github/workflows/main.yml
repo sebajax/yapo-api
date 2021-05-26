@@ -4,7 +4,7 @@
 name: Main CI (Prod)
 
 on:
-  pull_request:
+  push:
     branches: [main]
 
 jobs:
@@ -38,4 +38,5 @@ jobs:
           npm run build
           npm run lint
           npm run test
+          npm run test_integration
           npm audit --audit-level=moderate

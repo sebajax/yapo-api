@@ -4,7 +4,7 @@ Yapo - [Calculate PI with decimals] Use cases for (Yapo interview)
 
 [![Main CI (Prod)](https://github.com/sebajax/yapo-api/actions/workflows/main.yml/badge.svg)](https://github.com/sebajax/yapo-api/actions/workflows/main.yml)
 
-## Docker using cloud proxy
+## Docker compose for develop
 
 1.  Install the dependencies that the project has using this command (Only fisrt time or when re-using):
     ```

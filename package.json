@@ -7,8 +7,10 @@
     "clean": "rm -rf ./dist && mkdir dist",
     "start": "node ./dist/app.js",
     "dev": "nodemon --exec babel-node ./src/app.js",
-    "test": "mocha --require @babel/register ./src/test/**/*.js --recursive",
-    "test_dist": "mocha ./dist/test/**/*.js --recursive",
+    "test": "mocha --require @babel/register ./src/test/calculations/unit/**/*.js --recursive",
+    "test_integration": "mocha --require @babel/register ./src/test/calculations/integration/**/*.js --recursive",
+    "test_dist": "mocha ./dist/test/calculations/unit/**/*.js --recursive",
+    "test_dist_integration": "mocha ./dist/test/calculations/integration/**/*.js --recursive",
     "lint": "eslint ./src --quiet",
     "pretty_check": "npx prettier --check ./src",
     "pretty_write": "npx prettier --write ./src"
@@ -21,7 +23,6 @@
   "dependencies": {
     "@babel/runtime": "^7.12.1",
     "@google-cloud/logging-winston": "^4.0.1",
-    "axios": "^0.21.1",
     "cookie-parser": "~1.4.4",
     "cors": "^2.8.5",
     "debug": "~2.6.9",

@@ -1,10 +1,8 @@
 // Module Imports
 import express from 'express';
-
 // Config Imports
 import { VERSION_NUMBER } from '../../config/app/version.config';
 
-// Module Consts
 const router = express.Router();
 
 /* GET api status. */

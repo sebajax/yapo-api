@@ -4,8 +4,8 @@ const EMPTY = 'EMPTY'; // cannot be empty
 const MIN_STRING = 'MIN_STRING'; // falls under the number of allowed characters
 const MAX_STRING = 'MAX_STRING'; // exceeds the number of allowed characters
 const LOWERCASE_STRING = 'LOWERCASE_STRING'; // string not in lowercase
-const MIN_NUMBER = 'MIN_NUMBER'; // is less than the allowed minimum number
-const MAX_NUMBER = 'MAX_NUMBER'; // is greater than the allowed maximum number
+const MIN_NUMBER = 'MIN_NUMBER = 1'; // is less than the allowed minimum number
+const MAX_NUMBER = 'MAX_NUMBER = 99'; // is greater than the allowed maximum number
 const MIN_DATE = 'MIN_DATE'; // is less than the selected start date
 const REQUIRED = 'REQUIRED'; // is required
 const ALPHANUM = 'ALPHANUM'; // must be alphanum
@@ -15,8 +15,8 @@ const OBJECT_BODY_ERROR = 'OBJECT_BODY_ERROR'; // Object incorrect attributes
 const errorString = {
   'string.base': `[{#key}] ${WRONG_TYPE}`,
   'string.empty': `[{#key}] ${EMPTY}`,
-  'string.min': `[{#key}] ${MIN_STRING} = 1`,
-  'string.max': `[{#key}] ${MAX_STRING} = 99`,
+  'string.min': `[{#key}] ${MIN_STRING}`,
+  'string.max': `[{#key}] ${MAX_STRING} `,
   'string.alphanum': `[{#key}] ${ALPHANUM}`,
   'string.lowercase': `[{#key}] ${LOWERCASE_STRING}`,
   'any.required': `[{#key}] ${REQUIRED}`,
