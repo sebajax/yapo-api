@@ -8,9 +8,9 @@
     "start": "node ./dist/app.js",
     "dev": "nodemon --exec babel-node ./src/app.js",
     "test": "mocha --require @babel/register ./src/test/calculations/unit/**/*.js --recursive",
-    "test_integration": "mocha --require @babel/register ./src/test/calculations/integration/**/*.js --recursive",
+    "test_integration": "mocha --require @babel/register ./src/test/calculations/integration/**/*.js --recursive --exit",
     "test_dist": "mocha ./dist/test/calculations/unit/**/*.js --recursive",
-    "test_dist_integration": "mocha ./dist/test/calculations/integration/**/*.js --recursive",
+    "test_dist_integration": "mocha ./dist/test/calculations/integration/**/*.js --recursive --exit",
     "lint": "eslint ./src --quiet",
     "pretty_check": "npx prettier --check ./src",
     "pretty_write": "npx prettier --write ./src"
