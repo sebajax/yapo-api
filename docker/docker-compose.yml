@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  yapo-api:
+    container_name: yapo-api
+    image: node:12-alpine
+    volumes:
+      - type: bind
+        source: ./../
+        target: /app
+      - type: volume
+        source: nodemodules
+        target: /app/node_modules
+        volume:
+          nocopy: true
+    working_dir: /app
+    command: npm run dev
+    ports:
+      - '5000:5000'
+    env_file:
+      - ./../.env
+volumes:
+  nodemodules:
